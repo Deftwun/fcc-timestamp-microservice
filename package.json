@@ -1,0 +1,12 @@
+{
+  "name": "timestamp-microservice",
+  "version": "0.0.1",
+  "description": "Free Code Camp BaseJump",
+  "main": "server.js",
+  "repository": "",
+  "author": "Jeff Wakeman <Deftwun@gmail.com>",
+  "dependencies": {
+    "express": "~3.2.4",
+    "moment": "^2.11.0"
+  }
+}
