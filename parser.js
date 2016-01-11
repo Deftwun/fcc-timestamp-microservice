@@ -16,7 +16,7 @@ function parse(s){
   
     var d = null;
   
-    if (isNaturalDate(s)){;
+    if (isNaturalDate(s)){
         d = moment(s,"MMM DD, YYYY");
     }
     else if (isUnixDate(s)){
@@ -25,14 +25,13 @@ function parse(s){
     
     //Build & Return JSON Data
     if (d){
-      var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-
+      
       var dateObject = {
           "unix" : d.unix(),
-          "natural" : months[d.month()] + " " + d.date() + ", " + d.year()
+          "natural": d.format("MMMM DD, YYYY")
       }
       
-      return JSON.stringify(dateObject);
+      return dateObject;
     }
   
     //Bail if we couldn't parse it

@@ -7,7 +7,7 @@ var port = 3000;
 app.use(express.static("client"));
 
 app.get("/:s",function(req,res){
-  res.send(dateParser(req.params.s));
+  res.json(dateParser(req.params.s));
 });
 
 app.listen(port, function () {
