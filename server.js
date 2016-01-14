@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 
 var dateParser = require("./parser.js");
-var port = $PORT || 3000;
+var port = process.env.PORT || 8080;
 
 app.use(express.static("client"));
 
