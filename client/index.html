@@ -4,8 +4,8 @@
   <head>
     <title>Timestamp Microservice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
   </head>
   
   <body>
@@ -14,10 +14,28 @@
       <div class="page-header">
         <h1>Timestamp microservice</h1>
       </div>
+      <div>
+        <h3> Pass either a natural language date or unix timestamp as a parameter to this url.</h3>
+        <h3>Server will respond with both formats in JSON format.</h3>
+        
+        <div class="alert alert-success">
+          
+          <h4> Example Input</h4>
+          <ul>
+            <li><code>https://thawing-escarpment-1689.herokuapp.com/December%2015,%202015</code></li>
+            <li><code>https://thawing-escarpment-1689.herokuapp.com/1450137600</code></li>
+          </ul>
+          
+          <h4> Example Output</h4>
+          <ul>
+            <li class="bg-info"><code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code></li>
+          </ul>
+   
+        </div>
     </div>   
     
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     
   </body>
 </html>
